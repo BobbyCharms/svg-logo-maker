@@ -2,7 +2,7 @@
     <svg version="1.1" width="500" 
     height="500" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="white" />
-    <polygon points="0, 250 500, 500 500, 0" fill="blue"/>
-    <text x="250" y="250" font-size="75" text-anchor="middle" dominant-baseline="central" fill="Black">lol</text>
+    <circle cx="250" cy="250" r="250" fill="green"/>
+    <text x="250" y="250" font-size="75" text-anchor="middle" dominant-baseline="central" fill="Black">Boo</text>
     </svg>
     

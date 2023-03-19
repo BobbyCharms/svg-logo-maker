@@ -7,6 +7,25 @@ const colorsOptions =
 
 const questions = [
     {
+        type: "input",
+        message: "Please type in 3 characters (max) for your logo.",
+        name: "text",
+        validate: function(input) {
+            if (input.length < 4 && input.length > 0) {
+                return true
+            } else {
+                return "Your logo can only be between 1-3 characters."
+            }
+        }
+    },
+    {
+        type: "list",
+        message: "What color would you like your font?",
+        name: "fontColor",
+        choices: ["Black", "White"],
+        default: "Black"
+    },
+    {
         type: "list",
         message: "Would you like a Triangle, Square, or Circle logo?",
         name: "shape",
@@ -25,29 +44,10 @@ const questions = [
             }
         }
     },
-    {
-        type: "list",
-        message: "What color would you like your font?",
-        name: "fontColor",
-        choices: ["Black", "White"],
-        default: "Black"
-    },
-    {
-        type: "input",
-        message: "Please type in 3 characters (max) for your logo.",
-        name: "text",
-        validate: function(input) {
-            if (input.length < 4 && input.length > 0) {
-                return true
-            } else {
-                return "Your logo can only be between 1-3 characters."
-            }
-        }
-    },
 ]
 
 const makeFile = function(fileName, data) {
-    fs.writeFile(fileName, data, "utf8", (err) => err ? console.log(err) : console.log("You've created a logo.svg file." ));
+    fs.writeFile(fileName, data, "utf8", (err) => err ? console.log(err) : console.log("Generated logo.svg" ));
 }
 
 function generateLogo(answers) {
