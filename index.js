@@ -26,6 +26,13 @@ const questions = [
         }
     },
     {
+        type: "list",
+        message: "What color would you like your font?",
+        name: "fontColor",
+        choices: ["Black", "White"],
+        default: "Black"
+    },
+    {
         type: "input",
         message: "Please type in 3 characters (max) for your logo.",
         name: "text",
@@ -46,14 +53,15 @@ const makeFile = function(fileName, data) {
 function generateLogo(answers) {
     shape = `${answers.shape}`
     bkgColor = `${answers.bkgColor}`
+    fontColor = `${answers.fontColor}`
     text = `${answers.text}`
     let logo;
         if (shape === "Triangle") {
-            logo = new Triangle(bkgColor, text)
+            logo = new Triangle(text, bkgColor, fontColor)
         } else if (shape === "Circle") {
-            logo = new Circle(bkgColor, text)
+            logo = new Circle(text, bkgColor, fontColor)
         } else {
-            logo = new Square(bkgColor, text)
+            logo = new Square(text, bkgColor, fontColor)
         }
     return logo.createShape();
 }
