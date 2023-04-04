@@ -5,7 +5,7 @@
 ## Description
 This application allows you to generate a simple SVG logo using prompts on the command line interface. 
 
-Walkthrough video: 
+Walkthrough video: https://drive.google.com/file/d/1rW5voy71gaFEYMSw_bNe-5PuTILRG_lB/view
 
 ## Table of Contents
 - [Installation](#installation)
